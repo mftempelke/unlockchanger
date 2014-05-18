@@ -39,8 +39,10 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Voetnootje</string>
 			<key>label</key>
-			<string>Settings</string>
+			<string>Settings groep 2</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -55,6 +57,39 @@
 			<string>Slider Text2:</string>
 			<key>placeholder</key>
 			<string>slide to unlock</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>5</integer>
+			<key>defaults</key>
+			<string>nl.mfok.unlockchanger~prefs</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>ButtonsPerPage</string>
+			<key>label</key>
+			<string>Switches Per Page</string>
+			<key>validTitles</key>
+			<array>
+				<string>Two</string>
+				<string>Three</string>
+				<string>Four</string>
+				<string>Five</string>
+				<string>Six</string>
+				<string>Unpaged</string>
+				<string>Test</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>2</integer>
+				<integer>3</integer>
+				<integer>4</integer>
+				<integer>5</integer>
+				<integer>6</integer>
+				<integer>7</integer>
+			</array>
 		</dict>
 	</array>
 	<key>title</key>
