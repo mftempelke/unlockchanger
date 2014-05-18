@@ -7,7 +7,7 @@
 @implementation UnlockChangerListController
 - (id)specifiers {
 	if(_specifiers == nil) {
-		_specifiers = [[self loadSpecifiersFromPlistName:@"UnlockChanger" target:self] retain];
+		_specifiers = [[self loadSpecifiersFromPlistName:@"UnlockChangerMFOK" target:self] retain];
 	}
 	return _specifiers;
 }
