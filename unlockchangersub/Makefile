@@ -1,11 +1,11 @@
 ARCHS = armv7 arm64
 include theos/makefiles/common.mk
 
-BUNDLE_NAME = UnlockChanger
-UnlockChanger_FILES = UnlockChanger.mm
-UnlockChanger_INSTALL_PATH = /Library/PreferenceBundles
-UnlockChanger_FRAMEWORKS = UIKit
-UnlockChanger_PRIVATE_FRAMEWORKS = Preferences
+BUNDLE_NAME = UnlockChangerMFOK
+UnlockChangerMFOK_FILES = UnlockChangerMM.mm
+UnlockChangerMFOK_INSTALL_PATH = /Library/PreferenceBundles
+UnlockChangerMFOK_FRAMEWORKS = UIKit
+UnlockChangerMFOK_PRIVATE_FRAMEWORKS = Preferences
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 
