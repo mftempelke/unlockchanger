@@ -92,6 +92,44 @@
 				<integer>8</integer>
 			</array>
 		</dict>
+		<dict>
+			<key>bundle</key>
+			<string>FlipswitchSettings</string>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>flipswitchDefaultDisabled</key>
+			<array>
+				<string>com.a3tweaks.switch.rotation</string>
+				<string>com.a3tweaks.switch.flashlight</string>
+				<string>com.rpetrich.flipcontrolcenter.clock</string>
+				<string>com.rpetrich.flipcontrolcenter.calculator</string>
+				<string>com.rpetrich.flipcontrolcenter.camera</string>
+				<string>com.a3tweaks.switch.settings</string>
+				<string>com.a3tweaks.switch.respring</string>
+			</array>
+			<key>flipswitchDefaultEnabled</key>
+			<array>
+				<string>com.a3tweaks.switch.airplane-mode</string>
+				<string>com.a3tweaks.switch.wifi</string>
+				<string>com.a3tweaks.switch.bluetooth</string>
+				<string>com.a3tweaks.switch.do-not-disturb</string>
+				<string>com.a3tweaks.switch.rotation-lock</string>
+			</array>
+			<key>flipswitchDisabledKey</key>
+			<string>DisabledIdentifiers</string>
+			<key>flipswitchEnabledKey</key>
+			<string>EnabledIdentifiers</string>
+			<key>flipswitchPostNotification</key>
+			<string>com.rpetrich.flipcontrolcenter.settingschanged</string>
+			<key>flipswitchSettingsFile</key>
+			<string>/var/mobile/Library/Preferences/nl.mfok.fs.unlockchanger~prefs.plist</string>
+			<key>flipswitchTemplateBundle</key>
+			<string>/Library/Application Support/FlipControlCenter/TopShelf.bundle</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>Active Switches</string>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>UnlockChangerTitle</string>
