@@ -7,7 +7,7 @@
 - (void)setCustomSlideToUnlockText:(id)unlockText {
     
     //In this line, we're telling the program where our settings values exist at in the filesystem. We will use this, for example, to see if the user has our tweak enabled or not.
-    NSString *settingsPath = @"/var/mobile/Library/Preferences/com.phillipt.unlockchanger~prefs.plist";
+    NSString *settingsPath = @"/var/mobile/Library/Preferences/nl.mfok.unlockchanger~prefs.plist";
     
     //Now, we're creating a modifiable dictionary called 'prefs' which contains the settings values from the line above.
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
