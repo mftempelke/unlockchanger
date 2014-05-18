@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>UnlockChangerMFOK</string>
+	<string>UnlockChanger</string>
 	<key>CFBundleIdentifier</key>
 	<string>nl.mfok.unlockchanger~prefs</string>
 	<key>CFBundleInfoDictionaryVersion</key>
