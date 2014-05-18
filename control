@@ -1,5 +1,5 @@
 Package: nl.mfok.unlockchanger
-Name: 0UnlockChanger
+Name: AUnlockChanger
 Depends: mobilesubstrate
 Version: 0.0.1
 Architecture: iphoneos-arm
