@@ -130,6 +130,22 @@
 			<key>label</key>
 			<string>Active Switches</string>
 		</dict>
+		<dict>
+		    	<key>cell</key>
+			<string>PSGroupCell</string>
+    			<key>footerText</key>
+    			<string>If you like this tweak, please donate! It took a lot of work to make.</string>
+		</dict>
+		<dict>
+		    	<key>cell</key>
+    			<string>PSButtonCell</string>
+    			<key>action</key>
+    			<string>DonateButtonTapped</string>
+    			<key>icon</key>
+    			<string>Paypal.png</string>
+    			<key>label</key>
+    			<string>Donate</string>
+    		</dict>
 	</array>
 	<key>title</key>
 	<string>UnlockChangerTitle</string>
