@@ -140,7 +140,7 @@
 		    	<key>cell</key>
     			<string>PSButtonCell</string>
     			<key>action</key>
-    			<string>DonateButtonTapped</string>
+    			<string>DonateButtonTapped:</string>
     			<key>icon</key>
     			<string>Paypal.png</string>
     			<key>label</key>
