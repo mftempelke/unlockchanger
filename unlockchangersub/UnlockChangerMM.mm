@@ -9,15 +9,15 @@
 -(void)TFTwitterButtonTapped
 {
     UIApplication *app = [UIApplication sharedApplication];
-    NSURL *tweetbot = [NSURL URLWithString:@"tweetbot:///user_profile/tomf64"];
+    NSURL *tweetbot = [NSURL URLWithString:@"tweetbot:///user_profile/mftemp"];
     if ([app canOpenURL:tweetbot])
         [app openURL:tweetbot];
     else {
-        NSURL *twitterapp = [NSURL URLWithString:@"twitter:///user?screen_name=tomf64"];
+        NSURL *twitterapp = [NSURL URLWithString:@"twitter:///user?screen_name=mftemp"];
         if ([app canOpenURL:twitterapp])
             [app openURL:twitterapp];
         else {
-            NSURL *twitterweb = [NSURL URLWithString:@"http://twitter.com/tomf64"];
+            NSURL *twitterweb = [NSURL URLWithString:@"http://twitter.com/mftemp"];
             [app openURL:twitterweb];
         }
     }
@@ -26,15 +26,15 @@
 -(void)JGTwitterButtonTapped
 {
     UIApplication *app = [UIApplication sharedApplication];
-    NSURL *tweetbot = [NSURL URLWithString:@"tweetbot:///user_profile/JeremyGoulet"];
+    NSURL *tweetbot = [NSURL URLWithString:@"tweetbot:///user_profile/mftemp"];
     if ([app canOpenURL:tweetbot])
         [app openURL:tweetbot];
     else {
-        NSURL *twitterapp = [NSURL URLWithString:@"twitter:///user?screen_name=JeremyGoulet"];
+        NSURL *twitterapp = [NSURL URLWithString:@"twitter:///user?screen_name=mftemp"];
         if ([app canOpenURL:twitterapp])
             [app openURL:twitterapp];
         else {
-            NSURL *twitterweb = [NSURL URLWithString:@"http://twitter.com/JeremyGoulet"];
+            NSURL *twitterweb = [NSURL URLWithString:@"http://twitter.com/mftemp"];
             [app openURL:twitterweb];
         }
     }
@@ -42,7 +42,7 @@
 
 -(void)DonateButtonTapped
 {
-    NSURL *donateURL = [NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=tomf64%40gmail%2ecom&lc=US&item_name=Thomas%20Finch&item_number=Priority%20Lock&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest"];
+    NSURL *donateURL = [NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=fokkema%2emenno%40gmail%2ecom&lc=US&item_name=Menno%20Fokkema&item_number=Priority%20Lock&no_note=0&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest"];
     [[UIApplication sharedApplication] openURL:donateURL];
 }
 
