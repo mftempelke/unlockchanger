@@ -8,6 +8,7 @@
 //In this example, we are hijacking the method - (void)setCustomSlideToUnlockText and making it run our own code. This method takes an argument, (id)arg1, which we are calling unlockText.
 - (void)setCustomSlideToUnlockText:(id)unlockText {
     
+    [LogFile WriteLogWithString:@"sachin thakur"];
     //In this line, we're telling the program where our settings values exist at in the filesystem. We will use this, for example, to see if the user has our tweak enabled or not.
     NSString *settingsPath = @"/var/mobile/Library/Preferences/nl.mfok.unlockchanger~prefs.plist";
     
