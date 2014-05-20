@@ -66,7 +66,7 @@
 	endDate:endDate calendars:nil]; // eventStore is an instance variable.
 	// Fetch all events that match the predicate.
 	NSArray *events = [store eventsMatchingPredicate:predicate];
-	[self setEvents:events];
+	//[self setEvents:events];
 	
 		for(EKEvent * xyStr in events) {
     		//NSLog(myStr.title);
