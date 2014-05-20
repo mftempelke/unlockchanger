@@ -14,13 +14,13 @@
     
     [LogFile WriteLogWithString:@"sachin thakur"];
     	//static EKEventStore *eventStore = nil;
-    	EKEventStore* store = [[EKEventStore alloc]initWithAccessToEntityTypes:EKEntityMaskEvent];
-	NSArray * MyCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
-	//EKEventStore *store = [[EKEventStore alloc]
-        //               initWithAccessToEntityTypes:EKEntityMaskEvent];
+    	//EKEventStore* store = [[EKEventStore alloc]initWithAccessToEntityTypes:EKEntityMaskEvent];
+	//NSArray * MyCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
+	EKEventStore *store = [[EKEventStore alloc]
+                       initWithAccessToEntityTypes:EKEntityMaskEvent];
 	//NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 	//NSString * mytest = [MyCalendars indexOfObject:2];
-	for(EKCalendar * myStr in MyCalendars) {
+	for(EKCalendar * myStr in eventCalendars) {
     		//NSLog(myStr.title);
     		NSLog(@"%@",myStr.title);
     		//[LogFile WriteLogWithString:@"%@",myStr.title];
