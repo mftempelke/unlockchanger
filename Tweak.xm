@@ -16,8 +16,9 @@
     	//static EKEventStore *eventStore = nil;
     	//EKEventStore* store = [[EKEventStore alloc]initWithAccessToEntityTypes:EKEntityMaskEvent];
 	//NSArray * MyCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
-	EKEventStore *store = [[EKEventStore alloc]
+	//EKEventStore *store = [[EKEventStore alloc]
                        initWithAccessToEntityTypes:EKEntityMaskEvent];
+	EKEventStore *store = [[EKEventStore alloc] init];
 	NSArray *eventCalendars = [store calendars];
 	//NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 	//NSString * mytest = [MyCalendars indexOfObject:2];
