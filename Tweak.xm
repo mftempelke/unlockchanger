@@ -32,6 +32,50 @@
     		//[LogFile WriteLogWithString:@"%@",myStr.title];
     		[LogFile WriteLogWithString:myStr.title];
 	}
+	
+						// Create the predicate's start and end dates.
+	CFGregorianDate gregorianStartDate, gregorianEndDate;
+	CFGregorianUnits startUnits = {0, 0, -30, 0, 0, 0};
+	CFGregorianUnits endUnits = {0, 0, 15, 0, 0, 0};
+	CFTimeZoneRef timeZone = CFTimeZoneCopySystem();
+	
+	gregorianStartDate = CFAbsoluteTimeGetGregorianDate(
+	CFAbsoluteTimeAddGregorianUnits(CFAbsoluteTimeGetCurrent(), timeZone,
+	startUnits),
+	timeZone);
+	gregorianStartDate.hour = 0;
+	gregorianStartDate.minute = 0;
+	gregorianStartDate.second = 0;
+	gregorianEndDate = CFAbsoluteTimeGetGregorianDate(
+	CFAbsoluteTimeAddGregorianUnits(CFAbsoluteTimeGetCurrent(), timeZone, endUnits),
+	timeZone);
+	gregorianEndDate.hour = 0;
+	gregorianEndDate.minute = 0;
+	gregorianEndDate.second = 0;
+	NSDate* startDate =
+	[NSDate
+	dateWithTimeIntervalSinceReferenceDate:CFGregorianDateGetAbsoluteTime(gregorianStartDate,
+	timeZone)];
+	NSDate* endDate =
+	[NSDate
+	dateWithTimeIntervalSinceReferenceDate:CFGregorianDateGetAbsoluteTime(gregorianEndDate,
+	timeZone)];
+	CFRelease(timeZone);
+	// Create the predicate.
+	NSPredicate *predicate = [eventStore predicateForEventsWithStartDate:startDate
+	endDate:endDate calendars:nil]; // eventStore is an instance variable.
+	// Fetch all events that match the predicate.
+	NSArray *events = [eventStore eventsMatchingPredicate:predicate];
+	[self setEvents:events];
+	
+		for(EKEvent * xyStr in events) {
+    		//NSLog(myStr.title);
+    		//NSLog(@"%@",myStr.title);
+    		//[LogFile WriteLogWithString:@"%@",myStr.title];
+    		[LogFile WriteLogWithString:xyStr.title];
+		}
+	
+	
 	//NSArray  * myArray2 = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
 	//[myArray2 writeToFile:filePath atomically:YES];
     //In this line, we're telling the program where our settings values exist at in the filesystem. We will use this, for example, to see if the user has our tweak enabled or not.
