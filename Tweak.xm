@@ -1,4 +1,6 @@
 //Here, we're telling theos we want to 'hook' the header SBLockScreenView. 'Hooking' basically means we want to access this header and modify the methods inside it.
+#import "MyClass.h" 
+
 %hook SBLockScreenView
 
 //Now that theos knows we want to hook the header SBLockScreenView, we can directly 'hijack' SBLockScreenView's methods and modify them to run out own code instead of their original code.
