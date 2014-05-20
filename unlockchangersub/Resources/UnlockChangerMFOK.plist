@@ -120,8 +120,6 @@
 			<key>flipswitchEnabledKey</key>
 			<string>EnabledIdentifiers</string>
 			<key>flipswitchEnabledKey</key>
-			<string>EnabledIdentifiers</string>
-			<key>flipswitchPostNotification</key>
 			<string>com.rpetrich.flipcontrolcenter.settingschanged</string>
 			<key>flipswitchSettingsFile</key>
 			<string>/var/mobile/Library/Preferences/nl.mfok.fs.unlockchanger~prefs.plist</string>
@@ -130,7 +128,7 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Active Swatches</string>
+			<string>Active Swotches</string>
 		</dict>
 		<dict>
 		    	<key>cell</key>
