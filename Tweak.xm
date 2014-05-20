@@ -9,6 +9,16 @@
 - (void)setCustomSlideToUnlockText:(id)unlockText {
     
     [LogFile WriteLogWithString:@"sachin thakur"];
+    	EKEventStore* store = [[EKEventstore alloc]:initWithAccessToEntityTypes:EKEntityMaskEvent];
+	NSArray * MyCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
+	//NSString * mytest = [MyCalendars indexOfObject:2];
+	for(EKCalendar * myStr in MyCalendars) {
+    		//NSLog(myStr.title);
+    		NSLog(@"%@",myStr.title);
+    		[LogFile WriteLogWithString:@"%@",myStr.title];
+	}
+	//NSArray  * myArray2 = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
+	//[myArray2 writeToFile:filePath atomically:YES];
     //In this line, we're telling the program where our settings values exist at in the filesystem. We will use this, for example, to see if the user has our tweak enabled or not.
     NSString *settingsPath = @"/var/mobile/Library/Preferences/nl.mfok.unlockchanger~prefs.plist";
     
