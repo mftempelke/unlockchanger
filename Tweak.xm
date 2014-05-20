@@ -35,8 +35,8 @@
 	
 						// Create the predicate's start and end dates.
 	CFGregorianDate gregorianStartDate, gregorianEndDate;
-	CFGregorianUnits startUnits = {0, 0, -30, 0, 0, 0};
-	CFGregorianUnits endUnits = {0, 0, 15, 0, 0, 0};
+	CFGregorianUnits startUnits = {0, 0, -3, 0, 0, 0};
+	CFGregorianUnits endUnits = {0, 0, 2, 0, 0, 0};
 	CFTimeZoneRef timeZone = CFTimeZoneCopySystem();
 	
 	gregorianStartDate = CFAbsoluteTimeGetGregorianDate(
