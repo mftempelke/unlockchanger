@@ -18,7 +18,8 @@
 	//NSArray * MyCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 	EKEventStore *store = [[EKEventStore alloc]
                        initWithAccessToEntityTypes:EKEntityMaskEvent];
-	NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
+	NSArray *eventCalendars = [store calendars];
+	//NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 	//NSString * mytest = [MyCalendars indexOfObject:2];
 	for(EKCalendar * myStr in eventCalendars) {
     		//NSLog(myStr.title);
