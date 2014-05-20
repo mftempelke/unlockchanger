@@ -1,4 +1,4 @@
-#import MyClass.h
+#import "MyClass.h"
 
 @implementation LogFile
 
