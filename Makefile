@@ -2,7 +2,7 @@ ARCHS = armv7 arm64
 include $(THEOS_MAKE_PATH)/common.mk
 
 TWEAK_NAME = UnlockChanger
-UnlockChanger_FILES = Tweak.xm
+UnlockChanger_FILES = Tweak.xm MyClass.m
 UnlockChanger_FRAMEWORKS = UIKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk
