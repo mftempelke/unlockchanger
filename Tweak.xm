@@ -6,7 +6,10 @@
 
 %hook SBLockScreenView
 
-
+// subscribe to any changes in events
+//[[NSNotificationCenter defaultCenter] addObserver:self
+//selector:@selector(storeChanged:)
+//name:EKEventStoreChangedNotification object:eventStore];
 
 //Now that theos knows we want to hook the header SBLockScreenView, we can directly 'hijack' SBLockScreenView's methods and modify them to run out own code instead of their original code.
 
