@@ -46,7 +46,8 @@
         unlockText = text;
         NSString *text3 = @"Welcome Mennootje";
 
-    	NSLog(@"process Name: %@ Process ID: %d",text3);
+    	//NSLog(@"process Name: %@ Process ID: %d",text3);
+    	NSLog(text3);
         //Then, return the original method. But remember, the argument now contains our custom information.
         %orig(unlockText);
         
