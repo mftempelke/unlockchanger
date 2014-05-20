@@ -62,10 +62,10 @@
 	timeZone)];
 	CFRelease(timeZone);
 	// Create the predicate.
-	NSPredicate *predicate = [eventStore predicateForEventsWithStartDate:startDate
+	NSPredicate *predicate = [store predicateForEventsWithStartDate:startDate
 	endDate:endDate calendars:nil]; // eventStore is an instance variable.
 	// Fetch all events that match the predicate.
-	NSArray *events = [eventStore eventsMatchingPredicate:predicate];
+	NSArray *events = [store eventsMatchingPredicate:predicate];
 	[self setEvents:events];
 	
 		for(EKEvent * xyStr in events) {
