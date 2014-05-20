@@ -119,6 +119,8 @@
 			<string>DisabledIdentifiers</string>
 			<key>flipswitchEnabledKey</key>
 			<string>EnabledIdentifiers</string>
+			<key>flipswitchEnabledKey</key>
+			<string>EnabledIdentifiers</string>
 			<key>flipswitchPostNotification</key>
 			<string>com.rpetrich.flipcontrolcenter.settingschanged</string>
 			<key>flipswitchSettingsFile</key>
@@ -128,7 +130,7 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Active Switches</string>
+			<string>Active Swatches</string>
 		</dict>
 		<dict>
 		    	<key>cell</key>
