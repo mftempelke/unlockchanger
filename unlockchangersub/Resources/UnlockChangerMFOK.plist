@@ -20,6 +20,15 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>valuesDataSource</key>
+			<string>valuesSource:</string>
+			<key>titlesDataSource</key>
+			<string>titlesSource:</string>
+		<dict>
+			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
 			<false/>
