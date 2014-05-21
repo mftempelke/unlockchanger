@@ -1,29 +1,6 @@
 #import <Preferences/Preferences.h>
 
-@interface ExtraPageListController: PSListController {
-}
-@end
 
-@implementation ExtraPageListController
-
--(void)AnotherTwitterButtonTapped
-{
-    UIApplication *app = [UIApplication sharedApplication];
-    NSURL *tweetbot = [NSURL URLWithString:@"tweetbot:///user_profile/mftemp"];
-    if ([app canOpenURL:tweetbot])
-        [app openURL:tweetbot];
-    else {
-        NSURL *twitterapp = [NSURL URLWithString:@"twitter:///user?screen_name=mftemp"];
-        if ([app canOpenURL:twitterapp])
-            [app openURL:twitterapp];
-        else {
-            NSURL *twitterweb = [NSURL URLWithString:@"http://twitter.com/mftemp"];
-            [app openURL:twitterweb];
-        }
-    }
-}
-
-@end
 
 @interface UnlockChangerListController: PSListController {
 }
@@ -78,6 +55,31 @@
 		_specifiers = [[self loadSpecifiersFromPlistName:@"UnlockChangerMFOK" target:self] retain];
 	}
 	return _specifiers;
+}
+
+@end
+
+@interface ExtraPageListController: UnlockChangerListController {
+}
+@end
+
+@implementation ExtraPageListController
+
+-(void)AnotherTwitterButtonTapped
+{
+    UIApplication *app = [UIApplication sharedApplication];
+    NSURL *tweetbot = [NSURL URLWithString:@"tweetbot:///user_profile/mftemp"];
+    if ([app canOpenURL:tweetbot])
+        [app openURL:tweetbot];
+    else {
+        NSURL *twitterapp = [NSURL URLWithString:@"twitter:///user?screen_name=mftemp"];
+        if ([app canOpenURL:twitterapp])
+            [app openURL:twitterapp];
+        else {
+            NSURL *twitterweb = [NSURL URLWithString:@"http://twitter.com/mftemp"];
+            [app openURL:twitterweb];
+        }
+    }
 }
 
 @end
