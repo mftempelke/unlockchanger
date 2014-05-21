@@ -28,6 +28,10 @@
 			<string>valuesSource:</string>
 			<key>titlesDataSource</key>
 			<string>titlesSource:</string>
+			<key>key</key>
+			<string>testarray</string>
+			<key>label</key>
+			<string>MyTestArray</string>
 		</dict>
 		<dict>
 			<key>cell</key>
