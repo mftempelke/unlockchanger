@@ -21,6 +21,14 @@
 		<dict>
 			<key>cell</key>
 			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>FLPrefsController</string>
+			<key>label</key>
+			<string>FlipLaunch</string>
+			</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
 			<key>default</key>
 			<integer>120</integer>
 			<key>defaults</key>
