@@ -21,6 +21,10 @@
 		<dict>
 			<key>cell</key>
 			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>120</integer>
+			<key>defaults</key>
+			<string>nl.mfok.unlockchanger~prefs</string>
 			<key>detail</key>
 			<string>PSListItemsController</string>
 			<!--string>UnlockChangerListController</string-->
