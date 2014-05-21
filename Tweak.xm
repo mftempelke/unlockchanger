@@ -76,7 +76,7 @@
     		//NSLog(@"%@",myStr.title);
     		//[LogFile WriteLogWithString:@"%@",myStr.title];
     		[LogFile WriteLogWithString:xyStr.title];
-    		NSString *dateString = [dateFormatter stringFromDate:[NSDate xyStr.startDate]];
+    		NSString *dateString = [dateFormatter stringFromDate:xyStr.startDate];
     		[LogFile WriteLogWithString:dateString];
 		}
 	
