@@ -22,8 +22,8 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>detail</key>
-			<string>PSListItemsController</string>
-			<!--string>UnlockChangerListController</string-->
+			<!--string>PSListItemsController</string-->
+			<string>UnlockChangerListController</string>
 			<key>valuesDataSource</key>
 			<string>valuesSource:</string>
 			<key>titlesDataSource</key>
