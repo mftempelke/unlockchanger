@@ -14,7 +14,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>detail</key>
-			<string>ExtraPageController</string>
+			<string>ExtraPageListController</string>
 			<key>label</key>
 			<string>AnotherPage</string>
 		</dict>
