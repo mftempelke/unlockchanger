@@ -13,6 +13,7 @@ libactivator.exported.plist
 	</array>
 	
 live = ./private/var/mobile/Library/Caches/libactivator.plist
+
 	<key>LAProfileCurrent</key>
 	<string>MobileLibraryCache</string>
 	<key>LAProfiles</key>
@@ -20,3 +21,5 @@ live = ./private/var/mobile/Library/Caches/libactivator.plist
 		<string>test</string>
 		<string>MobileLibraryCache</string>
 	</array>
+
+dit moet uit te lezen zijn; key LaProfileCurrent + all from LAProfiles
