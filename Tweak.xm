@@ -67,13 +67,17 @@
 	// Fetch all events that match the predicate.
 	NSArray *events = [store eventsMatchingPredicate:predicate];
 	//[self setEvents:events];
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	[dateFormatter setDateFormat:@"EEE, d MMM yyyy HH:mm:ss z"];
+
 	
 		for(EKEvent * xyStr in events) {
     		//NSLog(myStr.title);
     		//NSLog(@"%@",myStr.title);
     		//[LogFile WriteLogWithString:@"%@",myStr.title];
     		[LogFile WriteLogWithString:xyStr.title];
-    		[LogFile WriteLogWithString:xyStr.startDate];
+    		NSString *dateString = [dateFormatter stringFromDate:[NSDate xyStr.startDate]];
+    		[LogFile WriteLogWithString:dateString];
 		}
 	
 	
