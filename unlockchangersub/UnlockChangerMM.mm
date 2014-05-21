@@ -104,9 +104,9 @@ return _specifiers;
 
 @end
 
-
-@interface FLPrefsController : PSViewController <UITableViewDelegate>
-{
+@interface ExtraPageListController: UnlockChangerListController {
+//@interface FLPrefsController : PSViewController <UITableViewDelegate>
+//{
     UITableView *_tableView;
     
     NSString *_prefsKey;
