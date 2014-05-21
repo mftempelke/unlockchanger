@@ -22,9 +22,9 @@ NSMutableArray *idArray = [[NSMutableArray alloc] init];
 for(EKCalendar * myStr in eventCalendars) {
      //NSLog(myStr.title);
      //NSLog(@"%@",myStr.title);
-     [idArray addObject:myStr.id];
+     [idArray addObject:myStr.title];
      //[LogFile WriteLogWithString:@"%@",myStr.title];
-     [LogFile WriteLogWithString:myStr.title];
+     //[LogFile WriteLogWithString:myStr.title];
 }
   //return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
   return idArray;
