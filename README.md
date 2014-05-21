@@ -23,3 +23,11 @@ live = ./private/var/mobile/Library/Caches/libactivator.plist
 	</array>
 
 dit moet uit te lezen zijn; key LaProfileCurrent + all from LAProfiles
+
+activeren van profile : 
+
+	<key>LAEventListener/MobileLibraryCache(springboard)-libactivator.motion.shake</key>
+	<string>libactivator.profile.Default</string>
+	
+activator send libactivator.profile.Default
+
