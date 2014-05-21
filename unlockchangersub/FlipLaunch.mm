@@ -1,5 +1,5 @@
 #import <Preferences/Preferences.h>
-#import <libapplist/AppList.h>
+#import <AppList.h>
 #import <objc/runtime.h>
 
 @interface FLPrefsController : PSViewController <UITableViewDelegate>
