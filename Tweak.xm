@@ -97,6 +97,11 @@
 	NSString *text2 = [prefs objectForKey:@"text2"];
     NSString *textAct = [prefsAct objectForKey:@"LAProfileCurrent"];
     [LogFile WriteLogWithString:textAct];
+    NSArray *myActProfs = [prefsAct objectForKey:@"LAProfiles"];
+    	for(NSString *Prof in myActProfs) {
+    	[LogFile WriteLogWithString:Prof];
+	}
+    
     
     //Make a boolean which holds the value of the settings key called "enabled", much like the line above.
     //BOOL enabled = [prefs objectForKey:@"enabled"];
