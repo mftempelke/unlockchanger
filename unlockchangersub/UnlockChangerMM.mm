@@ -1,7 +1,8 @@
 #import <Preferences/Preferences.h>
 #import <AppList.h>
 #import <objc/runtime.h>
-
+#import <EventKit/EventKit.h>
+#import <EventKitUI/EventKitUI.h>
 
 @interface UnlockChangerListController: PSListController {
 }
@@ -10,11 +11,43 @@
 @implementation UnlockChangerListController
 
 - (NSArray *)valuesSource:(id)target {
-  return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
+
+	EKEventStore *store = [[EKEventStore alloc] init];
+NSArray *eventCalendars = [store calendars];
+//NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
+//NSString * mytest = [MyCalendars indexOfObject:2];
+NSMutableArray *idArray = [[NSMutableArray alloc] init];
+
+
+for(EKCalendar * myStr in eventCalendars) {
+     //NSLog(myStr.title);
+     //NSLog(@"%@",myStr.title);
+     [idArray addObject:myStr.id];
+     //[LogFile WriteLogWithString:@"%@",myStr.title];
+     [LogFile WriteLogWithString:myStr.title];
+}
+  //return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
+  return idArray;
 }
 
 - (NSArray *)titlesSource:(id)target {
-  return [NSArray arrayWithObjects:@"80(default)", @"100", @"120", @"160", @"200(insensitive)", nil];
+	EKEventStore *store = [[EKEventStore alloc] init];
+NSArray *eventCalendars = [store calendars];
+//NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
+//NSString * mytest = [MyCalendars indexOfObject:2];
+NSMutableArray *idArray = [[NSMutableArray alloc] init];
+
+
+for(EKCalendar * myStr in eventCalendars) {
+     //NSLog(myStr.title);
+     //NSLog(@"%@",myStr.title);
+     [idArray addObject:myStr.title];
+     //[LogFile WriteLogWithString:@"%@",myStr.title];
+     //[LogFile WriteLogWithString:myStr.title];
+}
+  //return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
+  return idArray;
+  //return [NSArray arrayWithObjects:@"80(default)", @"100", @"120", @"160", @"200(insensitive)", nil];
 }
 
 
