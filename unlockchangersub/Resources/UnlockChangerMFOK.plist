@@ -20,6 +20,16 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>MySwitches</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>FlipswitchSettings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>detail</key>
 			<string>FLPrefsController</string>
