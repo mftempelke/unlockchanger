@@ -2,7 +2,7 @@ ARCHS = armv7 arm64
 include theos/makefiles/common.mk
 
 BUNDLE_NAME = UnlockChangerMFOK
-UnlockChangerMFOK_FILES = UnlockChangerMM.mm // FlipLaunch.mm
+UnlockChangerMFOK_FILES = UnlockChangerMM.mm
 UnlockChangerMFOK_INSTALL_PATH = /Library/PreferenceBundles
 UnlockChangerMFOK_FRAMEWORKS = UIKit
 UnlockChangerMFOK_PRIVATE_FRAMEWORKS = Preferences
