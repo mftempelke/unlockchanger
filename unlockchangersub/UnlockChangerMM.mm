@@ -84,7 +84,10 @@
 
 - (id)specifiers {
 if(_specifiers == nil) {
-_specifiers = [[self loadSpecifiersFromPlistName:@"ExtraPage" target:self] retain];
+
+//_specifiers = [[self loadSpecifiersFromPlistName:@"ExtraPage" target:self] retain];
+NSArray  * myArray2 = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
+_specifiers = [self addSpecifiersFromArray:myArray2];
 }
 return _specifiers;
 }
