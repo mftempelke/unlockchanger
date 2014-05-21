@@ -61,6 +61,19 @@ for(EKCalendar * myStr in eventCalendars) {
   //return [NSArray arrayWithObjects:@"80(default)", @"100", @"120", @"160", @"200(insensitive)", nil];
 }
 
+- (NSArray *)ActProfiles:(id)target {
+    NSString *settingsPathAct = @"/private/var/mobile/Library/Caches/libactivator.plist";
+    NSMutableDictionary *prefsAct = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathAct];
+    NSString *textAct = @"Default";
+    NSArray *myActProfs = [prefsAct objectForKey:@"LAProfiles"];
+    NSMutableArray *idArray = [[NSMutableArray alloc] init];
+     [idArray addObject:textAct];
+     for(NSString *Prof in myActProfs) {
+     [idArray addObject:Prof];
+	}
+  return idArray;
+}
+
 
 -(void)TFTwitterButtonTapped
 {
