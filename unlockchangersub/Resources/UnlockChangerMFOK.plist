@@ -49,7 +49,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>default</key>
-			<integer>Default</integer>
+			<string>Default</string>
 			<key>defaults</key>
 			<string>nl.mfok.unlockchanger~prefs</string>
 			<key>detail</key>
