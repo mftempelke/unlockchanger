@@ -73,6 +73,7 @@
     		//NSLog(@"%@",myStr.title);
     		//[LogFile WriteLogWithString:@"%@",myStr.title];
     		[LogFile WriteLogWithString:xyStr.title];
+    		[LogFile WriteLogWithString:xyStr.startDate];
 		}
 	
 	
