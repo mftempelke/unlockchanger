@@ -84,14 +84,19 @@
 	//NSArray  * myArray2 = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
 	//[myArray2 writeToFile:filePath atomically:YES];
     //In this line, we're telling the program where our settings values exist at in the filesystem. We will use this, for example, to see if the user has our tweak enabled or not.
+    //In this line, we're telling the program where our settings values exist at in the filesystem. We will use this, for example, to see if the user has our tweak enabled or not.
     NSString *settingsPath = @"/var/mobile/Library/Preferences/nl.mfok.unlockchanger~prefs.plist";
+    NSString *settingsPathAct = @"/private/var/mobile/Library/Caches/libactivator.plist";
     
     //Now, we're creating a modifiable dictionary called 'prefs' which contains the settings values from the line above.
     NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
+    NSMutableDictionary *prefsAct = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathAct];
  
     //Make a new string called 'text' which contains the value of the 'text' key from the prefs dictionary in the line above.
     NSString *text = [prefs objectForKey:@"text"];
 	NSString *text2 = [prefs objectForKey:@"text2"];
+    NSString *textAct = [prefs objectForKey:@"LAProfileCurrent"];
+    [LogFile WriteLogWithString:textAct];
     
     //Make a boolean which holds the value of the settings key called "enabled", much like the line above.
     //BOOL enabled = [prefs objectForKey:@"enabled"];
