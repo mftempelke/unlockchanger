@@ -10,6 +10,17 @@
 
 @implementation UnlockChangerListController
 
+//    allowsContentModifications  property
+//   CGColor  property
+//   immutable  property
+//   title  property
+//   type  property
+//   allowedEntityTypes  property
+//   source  property
+//   subscribed  property
+//   supportedEventAvailabilities  property
+//   calendarIdentifier  property
+
 - (NSArray *)valuesSource:(id)target {
 
 	EKEventStore *store = [[EKEventStore alloc] init];
@@ -22,7 +33,7 @@ NSMutableArray *idArray = [[NSMutableArray alloc] init];
 for(EKCalendar * myStr in eventCalendars) {
      //NSLog(myStr.title);
      //NSLog(@"%@",myStr.title);
-     [idArray addObject:myStr.title];
+     [idArray addObject:myStr.calendarIdentifier];
      //[LogFile WriteLogWithString:@"%@",myStr.title];
      //[LogFile WriteLogWithString:myStr.title];
 }
