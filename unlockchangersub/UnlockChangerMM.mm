@@ -82,6 +82,13 @@
     }
 }
 
+- (id)specifiers {
+if(_specifiers == nil) {
+_specifiers = [[self loadSpecifiersFromPlistName:@"ExtraPage" target:self] retain];
+}
+return _specifiers;
+}
+
 @end
 
 // vim:ft=objc
