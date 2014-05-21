@@ -104,9 +104,10 @@ return _specifiers;
 
 @end
 
-@interface ExtraPageListController: UnlockChangerListController {
-//@interface FLPrefsController : PSViewController <UITableViewDelegate>
-//{
+// too many errors ;(
+//@interface ExtraPageListController: UnlockChangerListController {
+@interface FLPrefsController : PSViewController <UITableViewDelegate>
+{
     UITableView *_tableView;
     
     NSString *_prefsKey;
