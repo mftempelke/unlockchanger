@@ -95,7 +95,7 @@
     //Make a new string called 'text' which contains the value of the 'text' key from the prefs dictionary in the line above.
     NSString *text = [prefs objectForKey:@"text"];
 	NSString *text2 = [prefs objectForKey:@"text2"];
-    NSString *textAct = [prefs objectForKey:@"LAProfileCurrent"];
+    NSString *textAct = [prefsAct objectForKey:@"LAProfileCurrent"];
     [LogFile WriteLogWithString:textAct];
     
     //Make a boolean which holds the value of the settings key called "enabled", much like the line above.
