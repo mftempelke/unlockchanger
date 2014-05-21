@@ -8,6 +8,15 @@
 
 @implementation UnlockChangerListController
 
+- (NSArray *)valuesSource:(id)target {
+  return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
+}
+
+- (NSArray *)titlesSource:(id)target {
+  return [NSArray arrayWithObjects:@"80(default)", @"100", @"120", @"160", @"200(insensitive)", nil];
+}
+
+
 -(void)TFTwitterButtonTapped
 {
     UIApplication *app = [UIApplication sharedApplication];
@@ -85,9 +94,9 @@
 - (id)specifiers {
 if(_specifiers == nil) {
 
-//_specifiers = [[self loadSpecifiersFromPlistName:@"ExtraPage" target:self] retain];
-NSArray  * myArray2 = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
-_specifiers = [[self addSpecifiersFromArray:myArray2 target:self] retain];
+_specifiers = [[self loadSpecifiersFromPlistName:@"ExtraPage" target:self] retain];
+//NSArray  * myArray2 = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
+//_specifiers = [[self addSpecifiersFromArray:myArray2 target:self] retain];
 }
 return _specifiers;
 }
