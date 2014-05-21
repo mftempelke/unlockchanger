@@ -47,6 +47,25 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>Default</integer>
+			<key>defaults</key>
+			<string>nl.mfok.unlockchanger~prefs</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<!--string>UnlockChangerListController</string-->
+			<key>valuesDataSource</key>
+			<string>ActProfiles:</string>
+			<key>titlesDataSource</key>
+			<string>ActProfiles:</string>
+			<key>key</key>
+			<string>activatorprofile</string>
+			<key>label</key>
+			<string>ActivatorProfile</string>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
 			<false/>
