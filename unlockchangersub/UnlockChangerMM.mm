@@ -3,6 +3,7 @@
 #import <objc/runtime.h>
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
+#import <UIKit/PreferencesTableCustomView.h>
 
 @interface UnlockChangerListController: PSListController {
 }
@@ -260,7 +261,7 @@ return _specifiers;
 }
 
 //and set the deletionAction Key of the specifier:
-//extern NSString* PSDeletionActionKey;
+extern NSString* PSDeletionActionKey;
  
 /*construct the PSSpecifier* testSpecifier here
 ....
