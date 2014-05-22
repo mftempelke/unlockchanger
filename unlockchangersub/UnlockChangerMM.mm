@@ -56,7 +56,7 @@ for(EKCalendar * myStr in eventCalendars) {
      //NSLog(@"%@",myStr.title);
      //myAccount = [EKSource myStr.source];
      //account = [NSString myAccount.title];
-     myAccount = [calendar source];
+     myAccount = [myStr source];
      account = [myAccount title];
      //account = [account stringByAppendingString:myStr.title];
      [account stringByAppendingFormat:@"%@ - %@",account,myStr.title];
