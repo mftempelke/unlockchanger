@@ -161,7 +161,7 @@
 
 {
 
-NSString *appName = [self displayName];
+NSString *appName = @"[self displayName]";
 
 NSString *message = [NSString stringWithFormat:@"The app %@ has been launched", appName, nil];
 
