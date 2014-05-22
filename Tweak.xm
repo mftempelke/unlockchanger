@@ -16,6 +16,13 @@
 //In this example, we are hijacking the method - (void)setCustomSlideToUnlockText and making it run our own code. This method takes an argument, (id)arg1, which we are calling unlockText.
 - (void)setCustomSlideToUnlockText:(id)unlockText {
     
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    //notification.fireDate = [[NSDate date] dateByAddingTimeInterval:60*60*24];
+    notification.fireDate = [[NSDate date] dateByAddingTimeInterval:60];
+    notification.alertBody = @"24 hours passed since last visit :(";
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
+    
     [LogFile WriteLogWithString:@"sachin thakur"];
     	//static EKEventStore *eventStore = nil;
     	//EKEventStore* store = [[EKEventStore alloc]initWithAccessToEntityTypes:EKEntityMaskEvent];
