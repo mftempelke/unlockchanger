@@ -251,7 +251,7 @@ return _specifiers;
 //Please note, you will only be able to delete a specifier, if it's class is either PSLinkListCell, PSListItemCell or PSTitleValueCell
 //To perform a custom action when the specifier gets deleted, you have to implent a method in your PSEditableListController subclass like this one
 
--(void)removedSpecifier:(PSSpecifier*)specifier{
+-(void)removedSpecifier:(PSSpecifier*)testSpecifier{
     UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Removing specifier: "
                                                    message:[specifier name]
                                                   delegate:self
