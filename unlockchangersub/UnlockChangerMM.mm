@@ -3,7 +3,7 @@
 #import <objc/runtime.h>
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
-#import <UIKit/PreferencesTableCustomView.h>
+
 
 @interface UnlockChangerListController: PSListController {
 }
@@ -177,39 +177,39 @@ return _specifiers;
 
 @end
 
-@interface CustomCell : PSTableCell <PreferencesTableCustomView> {
-    UILabel *_label;
-}
-@end
+//@interface CustomCell : PSTableCell <PreferencesTableCustomView> {
+//    UILabel *_label;
+//}
+//@end
  
-@implementation CustomCell
-- (id)initWithSpecifier:(PSSpecifier *)specifier
-{
-        self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell" specifier:specifier];
-        if (self) {
-                CGRect frame = [self frame];
+//@implementation CustomCell
+//- (id)initWithSpecifier:(PSSpecifier *)specifier
+//{
+//        self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell" specifier:specifier];
+//        if (self) {
+//                CGRect frame = [self frame];
+// 
+//                _label = [[UILabel alloc] initWithFrame:frame];
+//                [_label setLineBreakMode:UILineBreakModeWordWrap];
+//                [_label setNumberOfLines:0];
+//                [_label setText:@"You can use attributed text to make this prettier."];
+//             [_label setBackgroundColor:[UIColor clearColor]];
+//                [_label setShadowColor:[UIColor whiteColor]];
+//                [_label setShadowOffset:CGSizeMake(0,1)];
+ //               [_label setTextAlignment:UITextAlignmentCenter];
+// 
+//                [self addSubview:_label];
+ //               [_label release];
+//        }
+//        return self;
+//}
  
-                _label = [[UILabel alloc] initWithFrame:frame];
-                [_label setLineBreakMode:UILineBreakModeWordWrap];
-                [_label setNumberOfLines:0];
-                [_label setText:@"You can use attributed text to make this prettier."];
-                [_label setBackgroundColor:[UIColor clearColor]];
-                [_label setShadowColor:[UIColor whiteColor]];
-                [_label setShadowOffset:CGSizeMake(0,1)];
-                [_label setTextAlignment:UITextAlignmentCenter];
- 
-                [self addSubview:_label];
-                [_label release];
-        }
-        return self;
-}
- 
-- (float)preferredHeightForWidth:(float)arg1
-{
-    // Return a custom cell height.
-    return 60.f;
-}
-@end
+//- (float)preferredHeightForWidth:(float)arg1
+//{
+//    // Return a custom cell height.
+//    return 60.f;
+//}
+//@end
 
 //Then, set the cellClass, headerCellClass or footerCellClass in your specifier. For example:
 //
