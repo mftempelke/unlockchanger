@@ -116,6 +116,38 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>key</key>
+			<string>textanders1</string>
+			<key>alignment</key>
+			<integer>1</integer>
+			<key>label</key>
+			<string>Label</string>
+			<key>footerText</key>
+			<string>Voetje</string>
+			<key>icon</key>
+			<string>icon.png</string>
+			<key>hasicon</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>key</key>
+			<string>textanders2</string>
+			<key>alignment</key>
+			<integer>2</integer>
+			<key>label</key>
+			<string>Label</string>
+			<key>footerText</key>
+			<string>Voetje</string>
+			<key>icon</key>
+			<string>icon.png</string>
+			<key>hasicon</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
 			<string>Voetnootje</string>
