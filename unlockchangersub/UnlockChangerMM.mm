@@ -46,7 +46,7 @@ for(EKCalendar * myStr in eventCalendars) {
 NSArray *eventCalendars = [store calendars];
 //NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 //NSString * mytest = [MyCalendars indexOfObject:2];
-NSArray *idArray = [[NSArray alloc] init];
+NSMutableArray *idArray = [[NSArray alloc] init];
 
 NSString *account = @"";
 NSString *s = @"";
@@ -69,8 +69,9 @@ for(EKCalendar * myStr in eventCalendars) {
   //return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
   //NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
   //NSMutableArray *sidArray = [idArray sortedArrayUsingDescriptors:@[sd]];
+  NSArray *cidArray = [idArray copy];
   NSArray *sidArray =
-    [idArray sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    [cidArray sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
   return sidArray;
   //return [NSArray arrayWithObjects:@"80(default)", @"100", @"120", @"160", @"200(insensitive)", nil];
 }
