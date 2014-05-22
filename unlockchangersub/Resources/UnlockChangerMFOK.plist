@@ -147,6 +147,22 @@
 			<true/>
 		</dict>
 		<dict>
+			<key>alignment</key>
+			<integer>3</integer>
+			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>footerText</key>
+			<string>Voetje</string>
+			<key>hasicon</key>
+			<true/>
+			<key>icon</key>
+			<string>icon.png</string>
+			<key>key</key>
+			<string>textanders3</string>
+			<key>label</key>
+			<string>Label</string>
+		</dict>
+		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
