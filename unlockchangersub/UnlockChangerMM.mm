@@ -68,8 +68,8 @@ for(EKCalendar * myStr in eventCalendars) {
 }
   //return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
   NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
-  idArray = [idArray sortedArrayUsingDescriptors:@[sd]];
-  return idArray;
+  NSMutableArray *sidArray = [idArray sortedArrayUsingDescriptors:@[sd]];
+  return sidArray;
   //return [NSArray arrayWithObjects:@"80(default)", @"100", @"120", @"160", @"200(insensitive)", nil];
 }
 
