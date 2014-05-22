@@ -176,6 +176,100 @@ return _specifiers;
 
 @end
 
+@interface CustomCell : PSTableCell <PreferencesTableCustomView> {
+    UILabel *_label;
+}
+@end
+ 
+@implementation CustomCell
+- (id)initWithSpecifier:(PSSpecifier *)specifier
+{
+        self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell" specifier:specifier];
+        if (self) {
+                CGRect frame = [self frame];
+ 
+                _label = [[UILabel alloc] initWithFrame:frame];
+                [_label setLineBreakMode:UILineBreakModeWordWrap];
+                [_label setNumberOfLines:0];
+                [_label setText:@"You can use attributed text to make this prettier."];
+                [_label setBackgroundColor:[UIColor clearColor]];
+                [_label setShadowColor:[UIColor whiteColor]];
+                [_label setShadowOffset:CGSizeMake(0,1)];
+                [_label setTextAlignment:UITextAlignmentCenter];
+ 
+                [self addSubview:_label];
+                [_label release];
+        }
+        return self;
+}
+ 
+- (float)preferredHeightForWidth:(float)arg1
+{
+    // Return a custom cell height.
+    return 60.f;
+}
+@end
+
+//Then, set the cellClass, headerCellClass or footerCellClass in your specifier. For example:
+//
+//...
+//{ 
+//  cell = PSGroupCell;
+//  footerCellClass = CustomCell;
+//},
+//...
+//
+//A cell doesn't have to be specified for custom cells.
+//Making an editable PSListController
+//
+//Making a PSListController editable, so you can preform "swipe-to-delete" on the rows is easy at runtime.
+//
+//You just have to use a subclass of PSEditableListController (which is a subclass of PSListController) instead of a subclass of PSListController for your List Controller. For example:
+
+@interface MyListController : PSEditableListController {}
+@end
+@implementation MyListController
+- (id)specifiers
+{
+    if (!_specifiers){
+       //add a sample specifier to the list
+        PSSpecifier* testSpecifier = [PSSpecifier preferenceSpecifierNamed:@"test"
+                                                               target:self
+                                                                  set:nil
+                                                                  get:nil
+                                                               detail:nil
+                                                                 cell:PSTitleValueCell
+                                                                 edit:0];
+        _specifiers = [NSArray arrayWithObjects:testSpecifier, nil];
+ 
+    }
+    return _specifiers;
+}
+@end
+
+//Please note, you will only be able to delete a specifier, if it's class is either PSLinkListCell, PSListItemCell or PSTitleValueCell
+//To perform a custom action when the specifier gets deleted, you have to implent a method in your PSEditableListController subclass like this one
+
+-(void)removedSpecifier:(PSSpecifier*)specifier{
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Removing specifier: "
+                                                   message:[specifier name]
+                                                  delegate:self
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+    [alert show];
+}
+
+//and set the deletionAction Key of the specifier:
+//extern NSString* PSDeletionActionKey;
+ 
+/*construct the PSSpecifier* testSpecifier here
+....
+*/
+ 
+[testSpecifier setProperty:NSStringFromSelector(@selector(removedSpecifier:)) forKey:PSDeletionActionKey];
+
+
+
 // too many errors ;(
 //@interface ExtraPageListController: UnlockChangerListController {
 @interface FLPrefsController : PSViewController <UITableViewDelegate>
