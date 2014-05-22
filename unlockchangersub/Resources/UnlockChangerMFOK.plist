@@ -102,6 +102,21 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSStaticTextCell</string>
+			<key>key</key>
+			<string>text</string>
+			<key>label</key>
+			<string>Label</string>
+			<key>footerText</key>
+			<string>Voetje</string>
+			<key>icon</key>
+			<string>icon.png</string>
+			<key>hasicon</key>
+			<string>icon.png</string>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
 			<string>Voetnootje</string>
