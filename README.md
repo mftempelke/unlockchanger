@@ -31,3 +31,14 @@ activeren van profile :
 	
 activator send libactivator.profile.Default
 
+subscribe to calendar changes :
+
+[[NSNotificationCenter defaultCenter] addObserver:self
+
+                                         selector:@selector(storeChanged:)
+
+                                             name:EKEventStoreChangedNotification
+
+                                           object:eventStore];
+                                           
+   
