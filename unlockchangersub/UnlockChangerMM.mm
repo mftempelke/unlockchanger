@@ -60,6 +60,7 @@ for(EKCalendar * myStr in eventCalendars) {
      myAccount = [myStr source];
      account = [myAccount title];
      //account = [account stringByAppendingString:myStr.title];
+     s = @"";
      s = [s stringByAppendingFormat:@"%@ - %@",account,myStr.title];
      [idArray addObject:s];
      //[LogFile WriteLogWithString:@"%@",myStr.title];
