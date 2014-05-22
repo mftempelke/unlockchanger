@@ -54,8 +54,8 @@ EKSource *myAccount = nil;
 for(EKCalendar * myStr in eventCalendars) {
      //NSLog(myStr.title);
      //NSLog(@"%@",myStr.title);
-     myAccount = [myStr.source];
-     account = [myAccount.title];
+     myAccount = [EKSource myStr.source];
+     account = [NSString myAccount.title];
      //account = [account stringByAppendingString:myStr.title];
      [account stringByAppendingFormat:@"%@ - %@",account,myStr.title];
      [idArray addObject:account];
