@@ -228,6 +228,10 @@ return _specifiers;
 //You just have to use a subclass of PSEditableListController (which is a subclass of PSListController) instead of a subclass of PSListController for your List Controller. For example:
 
 @interface MyListController : PSEditableListController {}
+//-(NSArray*)specifiers;
+//-(void)clearCache:(PSSpecifier*)spec;
+- (id)specifiers;
+-(void)removedSpecifier:(PSSpecifier*)testSpecifier;
 @end
 @implementation MyListController
 - (id)specifiers
