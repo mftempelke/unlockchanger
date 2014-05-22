@@ -46,7 +46,7 @@ for(EKCalendar * myStr in eventCalendars) {
 NSArray *eventCalendars = [store calendars];
 //NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 //NSString * mytest = [MyCalendars indexOfObject:2];
-NSMutableArray *idArray = [[NSArray alloc] init];
+NSMutableArray *idArray = [[NSMutableArray alloc] init];
 
 NSString *account = @"";
 NSString *s = @"";
