@@ -48,11 +48,17 @@ NSArray *eventCalendars = [store calendars];
 //NSString * mytest = [MyCalendars indexOfObject:2];
 NSMutableArray *idArray = [[NSMutableArray alloc] init];
 
+NSString *account = @"";
+EKSource *myAccount = nil;
 
 for(EKCalendar * myStr in eventCalendars) {
      //NSLog(myStr.title);
      //NSLog(@"%@",myStr.title);
-     [idArray addObject:myStr.title];
+     myAccount = [myStr.source];
+     account = [myAccount.title];
+     //account = [account stringByAppendingString:myStr.title];
+     [account stringByAppendingFormat:@"%@ - %@",account,myStr.title];
+     [idArray addObject:account];
      //[LogFile WriteLogWithString:@"%@",myStr.title];
      //[LogFile WriteLogWithString:myStr.title];
 }
