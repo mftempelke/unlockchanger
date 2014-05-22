@@ -104,7 +104,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>key</key>
-			<string>text</string>
+			<string>textanders</string>
 			<key>label</key>
 			<string>Label</string>
 			<key>footerText</key>
@@ -112,7 +112,6 @@
 			<key>icon</key>
 			<string>icon.png</string>
 			<key>hasicon</key>
-			<string>icon.png</string>
 			<true/>
 		</dict>
 		<dict>
