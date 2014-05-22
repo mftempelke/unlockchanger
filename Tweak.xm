@@ -152,3 +152,27 @@
 
 //This lets theos know that we're done hooking this header.
 %end
+
+// http://ios-blog.co.uk/tutorials/how-to-create-a-mobilesubstrate-tweaks-for-ios/
+
+%hook SBApplicationIcon
+
+-(void)launch
+
+{
+
+NSString *appName = [self displayName];
+
+NSString *message = [NSString stringWithFormat:@"The app %@ has been launched", appName, nil];
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:appName message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+
+    [alert show];
+
+    [alert release];
+
+    %orig;
+
+}
+
+%end
