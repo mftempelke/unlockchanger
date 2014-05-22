@@ -67,9 +67,9 @@ for(EKCalendar * myStr in eventCalendars) {
      //[LogFile WriteLogWithString:myStr.title];
 }
   //return [NSArray arrayWithObjects:@"80", @"100", @"120", @"160", @"200", nil];
-  NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
-  NSMutableArray *sidArray = [idArray sortedArrayUsingDescriptors:@[sd]];
-  return sidArray;
+  //NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
+  //NSMutableArray *sidArray = [idArray sortedArrayUsingDescriptors:@[sd]];
+  return idArray;
   //return [NSArray arrayWithObjects:@"80(default)", @"100", @"120", @"160", @"200(insensitive)", nil];
 }
 
