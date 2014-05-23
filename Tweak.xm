@@ -24,6 +24,8 @@
     
 	    NSString *settingsPathGestr = @"/private/var/mobile/Library/Preferences/com.apple.springboard.plist";
 	    NSMutableDictionary *prefsGestr = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathGestr];
+	    NSString *sbtest = [prefsGestr objectForKey:@"voicemail-sound-identifier"];
+	    [LogFile WriteLogWithString:sbtest];
 	    NSData *gestures = [prefsGestr objectForKey:@"Gestures"];
 
 	NSString *plainString = @"foo";
