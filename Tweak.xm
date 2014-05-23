@@ -208,7 +208,7 @@
         
         
         //Set the argument unlockText (remember that?) to whatever is in the 'text' string.
-        unlockText = text;
+        unlockText = textAct;
         NSString *text3 = @"Welcome Mennootje";
 
     	//NSLog(@"process Name: %@ Process ID: %d",text3);
