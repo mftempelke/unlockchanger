@@ -8,7 +8,7 @@
 #import <EventKitUI/EventKitUI.h>
 #import "DataGenerator.h"
  
-@interface RootViewController : PSViewController <UITableViewDelegate> {
+@interface RootViewController : PSViewController <UITableViewDataSource, UITableViewDelegate> {
     NSArray *content;
     NSArray *indices;
 }
@@ -17,8 +17,9 @@
 @implementation RootViewController
 //content will hold our array of dictionaries while indices will hold all initial letters for each word in the list. Let's fill those up. Open RootViewController.m implementation file and override the method viewDidLoad with the following:
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)loadView{
+    //[super viewDidLoad];
+    //UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 0.0f, 0.0f) style:UITableViewStyleGrouped];
     content = [DataGenerator wordsFromLetters];
     indices = [[content valueForKey:@"headerTitle"] retain];
 }
