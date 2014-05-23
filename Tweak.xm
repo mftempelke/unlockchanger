@@ -61,14 +61,14 @@
 	//NSLog(@"%@", decodedString); // foo
 	[LogFile WriteLogWithString:decodedString];
 
-	NSString *pattern = @"[^\w\.]";
+	NSString *pattern = @"[^\\w\\.]";
 	NSString *str = decodedString;
 	NSError *error = nil;
 	NSRegularExpression *regex = [NSRegularExpression
                               regularExpressionWithPattern:pattern
                               options:NSRegularExpressionCaseInsensitive error:&error];
 	if(error != nil){
-    	NSString *err = [@"ERror: %@",error];
+    	NSString *err = (@"ERror: %@",error);
     	[LogFile WriteLogWithString:err];
 	} else{
     	NSString *replaced = [regex stringByReplacingMatchesInString:str
