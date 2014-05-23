@@ -11,20 +11,20 @@
 
 @implementation UnlockChangerListController
 
-//    allowsContentModifications  property
-//   CGColor  property
-//   immutable  property
-//   title  property
-//   type  property
-//   allowedEntityTypes  property
-//   source  property
-//   subscribed  property
-//   supportedEventAvailabilities  property
-//   calendarIdentifier  property
+// allowsContentModifications property
+// CGColor property
+// immutable property
+// title property
+// type property
+// allowedEntityTypes property
+// source property
+// subscribed property
+// supportedEventAvailabilities property
+// calendarIdentifier property
 
 - (NSArray *)valuesSource:(id)target {
 
-	EKEventStore *store = [[EKEventStore alloc] init];
+EKEventStore *store = [[EKEventStore alloc] init];
 NSArray *eventCalendars = [store calendars];
 //NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 //NSString * mytest = [MyCalendars indexOfObject:2];
@@ -43,7 +43,7 @@ for(EKCalendar * myStr in eventCalendars) {
 }
 
 - (NSArray *)titlesSource:(id)target {
-	EKEventStore *store = [[EKEventStore alloc] init];
+EKEventStore *store = [[EKEventStore alloc] init];
 NSArray *eventCalendars = [store calendars];
 //NSArray *eventCalendars = [store calendarsForEntityType:EKEntityTypeEvent];
 //NSString * mytest = [MyCalendars indexOfObject:2];
@@ -86,96 +86,82 @@ for(EKCalendar * myStr in eventCalendars) {
      [idArray addObject:textAct];
      for(NSString *Prof in myActProfs) {
      [idArray addObject:Prof];
-	}
+}
   return idArray;
 }
 
 - (NSArray *)GestrApps:(id)target {
+
 	NSString *settingsPathGestr = @"/private/var/mobile/Library/Preferences/com.apple.springboard.plist";
-NSMutableDictionary *prefsGestr = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathGestr];
-NSString *sbtest = [prefsGestr objectForKey:@"voicemail-sound-identifier"];
-[LogFile WriteLogWithString:sbtest];
-NSData *gestures = [prefsGestr objectForKey:@"Gestures"];
-
-NSString *base64StringGestr = [gestures base64EncodedStringWithOptions:0];
-//[LogFile WriteLogWithString:base64StringGestr];
-NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:base64StringGestr options:0];
-
-//NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSUnicodeStringEncoding];
-NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSASCIIStringEncoding];
-NSString *prefix = nil;
+	NSMutableDictionary *prefsGestr = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathGestr];
+	NSString *sbtest = [prefsGestr objectForKey:@"voicemail-sound-identifier"];
+	NSData *gestures = [prefsGestr objectForKey:@"Gestures"];
+	NSString *base64StringGestr = [gestures base64EncodedStringWithOptions:0];
+	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:base64StringGestr options:0];
+	NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSASCIIStringEncoding];
+	NSString *prefix = nil;
+	
 if ([decodedStringGestr length] >= 3)
-{ prefix = [decodedStringGestr substringToIndex:3]; }
+	{ prefix = [decodedStringGestr substringToIndex:3]; }
 else
-{ prefix = @"string te kort"; }
-//[LogFile WriteLogWithString:prefix];
-//[LogFile WriteLogWithString:decodedStringGestr];
+	{ prefix = @"string te kort"; }
 
 NSMutableArray *idArray = [[NSMutableArray alloc] init];
 NSArray *GestrArray = [decodedStringGestr componentsSeparatedByString:@"_"];
-     for(int i=0;i<[GestrArray count];i++){
+
+     for(int i=0;i<[GestrArray count];i++)
+	 {
         NSString *str=[GestrArray objectAtIndex:i];
-//[LogFile WriteLogWithString:str];
-NSLog(@"%@", str)
+		NSLog(@"%@", str)
      }
 
-if ([GestrArray count] < 1 || [GestrArray == nil ){ 
+if ([GestrArray count] < 1 || [GestrArray == nil ){
      [idArray addObject:@"no registered gestures for app"];
 	return idArray;
-}
+	}
 
-NSString *plainString = @"foo";
-
-NSData *plainData = [plainString dataUsingEncoding:NSUTF8StringEncoding];
-NSString *base64String = [plainData base64EncodedStringWithOptions:0];
-NSLog(@"%@", base64String); // Zm9v
-//[LogFile WriteLogWithString:base64String];
-
-
-NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
-NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
-//NSLog(@"%@", decodedString); // foo
-//[LogFile WriteLogWithString:decodedString];
-//[LogFile WriteLogWithString:@"start hier"];
-//NSString *pattern = @"[^\\w\\.]";
-NSString *pattern = @"[^a-z,A_Z,0-9\\.\\-]";
-//NSString *str = decodedStringGestr;
-NSError *error = nil;
-NSRegularExpression *regex = [NSRegularExpression
-                              regularExpressionWithPattern:pattern
-                              options:NSRegularExpressionCaseInsensitive error:&error];
-if(error != nil){
+		NSString *plainString = @"foo";
+		NSData *plainData = [plainString dataUsingEncoding:NSUTF8StringEncoding];
+		NSString *base64String = [plainData base64EncodedStringWithOptions:0];
+		NSLog(@"%@", base64String); // Zm9v
+		NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
+		NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+		NSString *pattern = @"[^a-z,A_Z,0-9\\.\\-]";
+		NSError *error = nil;
+		NSRegularExpression *regex = [NSRegularExpression
+									  regularExpressionWithPattern:pattern
+									  options:NSRegularExpressionCaseInsensitive error:&error];
+if(error != nil)
+{
      //NSString *err = (@"ERror: %@",error);
      //[LogFile WriteLogWithString:@"Error"];
-} else{
-
-   
- 
+} 
+else
+{
      for(int i=2;i<[GestrArray count];i++)
      {
-NSString *str=[GestrArray objectAtIndex:i];
-NSString *replaced = [regex stringByReplacingMatchesInString:str
-options:0
-range:NSMakeRange(0, [str length])
-withTemplate: @""];
-NSArray *stra = [replaced componentsSeparatedByString:@"Wstrokes"];
+		NSString *str=[GestrArray objectAtIndex:i];
+		NSString *replaced = [regex stringByReplacingMatchesInString:str
+		options:0
+		range:NSMakeRange(0, [str length])
+		withTemplate: @""];
+		NSArray *stra = [replaced componentsSeparatedByString:@"Wstrokes"];
 
-
-if ([stra count] > 1) {
-NSString *stras =[stra objectAtIndex:0];
-     [idArray addObject:stras];
-//[LogFile WriteLogWithString:stras];
-break;}
-else {
-//[LogFile WriteLogWithString:replaced];
-[idArray addObject:replaced];
-}
-}
-  }
+		if ([stra count] > 1) 
+		{
+		NSString *stras =[stra objectAtIndex:0];
+			 [idArray addObject:stras];
+		//[LogFile WriteLogWithString:stras];
+		break;}
+		else 
+		{
+		//[LogFile WriteLogWithString:replaced];
+		[idArray addObject:replaced];
+		}
 	}
+  }
   return idArray;
 }
-
 
 -(void)TFTwitterButtonTapped
 {
