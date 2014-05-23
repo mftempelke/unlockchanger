@@ -23,7 +23,7 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     
 	    NSString *settingsPathGestr = @"/private/var/mobile/Library/Preferences/com.apple.springboard.plist";
-	    NSMutableDictionary *prefsGestr = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathAct];
+	    NSMutableDictionary *prefsGestr = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathGestr];
 	    NSData *gestures = [prefsGestr objectForKey:@"Gestures"];
 
 	NSString *plainString = @"foo";
@@ -38,7 +38,8 @@
 	//NSLog(@"%@", decodedString); // foo
 	[LogFile WriteLogWithString:decodedString];
 
-	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:gestures options:0];
+	NSString *base64StringGestr = [gestures base64EncodedStringWithOptions:0];
+	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:base64StringGestr options:0];
 	NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSUTF8StringEncoding];
 	//NSLog(@"%@", decodedString); // foo
 	[LogFile WriteLogWithString:decodedStringGestr];
