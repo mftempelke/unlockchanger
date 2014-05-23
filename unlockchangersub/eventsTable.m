@@ -141,13 +141,17 @@ if ([tableView isEqual:self.Table] == YES){
         NSString *string1 = [NSDateFormatter localizedStringFromDate: date1 dateStyle: NSDateFormatterShortStyle timeStyle: NSDateFormatterNoStyle];
 
         result.detailTextLabel.text = 
-        [NSString stringWithFormat:@"All Day from %@ - %@",string1,string,
-         (long)[components month],
-         (long)[components day],
-         (long)[components year],
-         (long)[components1 month],
-         (long)[components1 day],
-         (long)[components1 year]];
+        [NSString stringWithFormat:@"All Day from %@ - %@",string1,string
+        //,
+        //
+        // (long)[components month],
+        // (long)[components day],
+        // (long)[components year],
+        // (long)[components hour],
+        // (long)[components minute],
+        // (long)[components1 hour],
+        // (long)[components1 minute]
+         ];
 
     } else {
         NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar] autorelease];
@@ -158,15 +162,17 @@ if ([tableView isEqual:self.Table] == YES){
         NSString *string1 = [NSDateFormatter localizedStringFromDate: date1 dateStyle: NSDateFormatterShortStyle timeStyle: NSDateFormatterShortStyle];
 
         result.detailTextLabel.text = 
-        [NSString stringWithFormat:@"%@ - %@",string1,string,
-
-         (long)[components month],
-         (long)[components day],
-         (long)[components year],
-         (long)[components hour],
-         (long)[components minute],
-         (long)[components1 hour],
-         (long)[components1 minute]];
+        [NSString stringWithFormat:@"%@ - %@",string1,string
+        //,
+        //
+        // (long)[components month],
+        // (long)[components day],
+        // (long)[components year],
+        // (long)[components hour],
+        // (long)[components minute],
+        // (long)[components1 hour],
+        // (long)[components1 minute]
+         ];
 
 
     }
