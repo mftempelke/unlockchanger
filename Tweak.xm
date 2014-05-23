@@ -229,6 +229,7 @@
 @interface SBIcon
 -(void)launchFromLocation:(int)arg1;
 -(id)displayName;
+-(id)displayIdentifier;
 @end
 
 %hook SBApplicationIcon
@@ -238,9 +239,10 @@
 {
 
 NSString *appName = [self displayName];
+NSString *appid = [self displayIdentifier];
 NSString *str = @"Gehooked in SBApplicationIcon door Mennootje";
 NSLog(@"%@", str);
-NSString *message = [NSString stringWithFormat:@"The app %@ has been launched", appName];
+NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as %@.", appName,appid ];
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:appName message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 
