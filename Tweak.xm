@@ -233,7 +233,7 @@
 {
 
 NSString *appName = @"[self displayName]";
-NSString str = @"Gehooked in SBApplicationIcon door Mennootej";
+NSString *str = @"Gehooked in SBApplicationIcon door Mennootej";
 NSLog(@"%@", str);
 NSString *message = [NSString stringWithFormat:@"The app %@ has been launched", appName, nil];
 
