@@ -173,11 +173,12 @@ if ([tableView isEqual:self.Table] == YES){
 
 }
 
-return(result);
 [event release];
 [eventsList release];
 [eventStore release];
 [result release];
+return(result);
+
 
 
 }
