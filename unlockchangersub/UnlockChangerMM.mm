@@ -95,6 +95,7 @@ for(EKCalendar * myStr in eventCalendars) {
 	NSString *settingsPathGestr = @"/private/var/mobile/Library/Preferences/com.apple.springboard.plist";
 	NSMutableDictionary *prefsGestr = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathGestr];
 	NSString *sbtest = [prefsGestr objectForKey:@"voicemail-sound-identifier"];
+	NSLog(@"%@",sbtest);
 	NSData *gestures = [prefsGestr objectForKey:@"Gestures"];
 	NSString *base64StringGestr = [gestures base64EncodedStringWithOptions:0];
 	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:base64StringGestr options:0];
@@ -127,6 +128,7 @@ if ([GestrArray count] < 1 ){
 		NSLog(@"%@", base64String); // Zm9v
 		NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
 		NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+		NSLog(@"%@",decodedString);
 		NSString *pattern = @"[^a-z,A_Z,0-9\\.\\-]";
 		NSError *error = nil;
 		NSRegularExpression *regex = [NSRegularExpression
