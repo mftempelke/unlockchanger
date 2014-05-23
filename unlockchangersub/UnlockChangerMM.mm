@@ -227,45 +227,45 @@ return _specifiers;
 //
 //You just have to use a subclass of PSEditableListController (which is a subclass of PSListController) instead of a subclass of PSListController for your List Controller. For example:
 
-@interface MyListController : PSEditableListController {}
-//-(NSArray*)specifiers;
-//-(void)clearCache:(PSSpecifier*)spec;
-- (id)specifiers;
--(void)removedSpecifier:(PSSpecifier*)testSpecifier;
-@end
-@implementation MyListController
-- (id)specifiers
-{
-    if (!_specifiers){
-       //add a sample specifier to the list
-        PSSpecifier* testSpecifier = [PSSpecifier preferenceSpecifierNamed:@"test"
-                                                               target:self
-                                                                  set:nil
-                                                                  get:nil
-                                                               detail:nil
-                                                                 cell:PSTitleValueCell
-                                                                 edit:0];
-        _specifiers = [NSArray arrayWithObjects:testSpecifier, nil];
- 
-    }
-    return _specifiers;
-}
-@end
+//@interface MyListController : PSEditableListController {}
+////-(NSArray*)specifiers;
+////-(void)clearCache:(PSSpecifier*)spec;
+//- (id)specifiers;
+//-(void)removedSpecifier:(PSSpecifier*)testSpecifier;
+//@end
+//@implementation MyListController
+//- (id)specifiers
+//{
+//    if (!_specifiers){
+//       //add a sample specifier to the list
+//        PSSpecifier* testSpecifier = [PSSpecifier preferenceSpecifierNamed:@"test"
+//                                                               target:self
+//                                                                  set:nil
+//                                                                  get:nil
+//                                                               detail:nil
+//                                                                 cell:PSTitleValueCell
+//                                                                 edit:0];
+//        _specifiers = [NSArray arrayWithObjects:testSpecifier, nil];
+// 
+//    }
+//    return _specifiers;
+//}
+//@end
 
 //Please note, you will only be able to delete a specifier, if it's class is either PSLinkListCell, PSListItemCell or PSTitleValueCell
 //To perform a custom action when the specifier gets deleted, you have to implent a method in your PSEditableListController subclass like this one
 
--(void)removedSpecifier:(PSSpecifier*)testSpecifier{
-    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Removing specifier: "
-                                                   message:[specifier name]
-                                                  delegate:self
-                                         cancelButtonTitle:@"OK"
-                                         otherButtonTitles:nil];
-    [alert show];
-}
+//-(void)removedSpecifier:(PSSpecifier*)testSpecifier{
+//    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Removing specifier: "
+//                                                   message:[specifier name]
+//                                                  delegate:self
+//                                         cancelButtonTitle:@"OK"
+//                                         otherButtonTitles:nil];
+//    [alert show];
+//}
 
 //and set the deletionAction Key of the specifier:
-extern NSString* PSDeletionActionKey;
+//extern NSString* PSDeletionActionKey;
  
 /*construct the PSSpecifier* testSpecifier here
 ....
