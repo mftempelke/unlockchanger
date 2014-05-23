@@ -83,7 +83,7 @@
 		NSArray *stra =  [replaced componentsSeparatedByString:@"Wstrokes"];
 		 
 		
-		if ([stra count]) > 0 {
+		if ([stra count] > 0) {
 		NSString *stras =[stra objectAtIndex:0];
 		[LogFile WriteLogWithString:stras];
 		break;}
