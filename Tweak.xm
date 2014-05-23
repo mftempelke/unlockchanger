@@ -228,7 +228,7 @@
 
 @interface SBIcon
 -(void)launchFromLocation:(int)arg1;
--(id)displayname;
+-(id)displayName;
 @end
 
 %hook SBApplicationIcon
