@@ -22,7 +22,9 @@
     notification.alertBody = @"24 hours passed since last visit :(";
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     
-    
+	    NSString *settingsPathGestr = @"/private/var/mobile/Library/Preferences/com.apple.springboard.plist";
+	    NSMutableDictionary *prefsGestr = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPathAct];
+	    NSData *gestures = [prefsGestr objectForKey:@"Gestures"];
 
 	NSString *plainString = @"foo";
 	
@@ -36,6 +38,10 @@
 	//NSLog(@"%@", decodedString); // foo
 	[LogFile WriteLogWithString:decodedString];
 
+	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:gestures options:0];
+	NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSUTF8StringEncoding];
+	//NSLog(@"%@", decodedString); // foo
+	[LogFile WriteLogWithString:decodedStringGestr];
 
     
     
