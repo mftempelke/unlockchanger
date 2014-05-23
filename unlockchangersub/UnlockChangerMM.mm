@@ -129,7 +129,7 @@ if ([GestrArray count] < 1 ){
 		NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
 		NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
 		NSLog(@"%@",decodedString);
-		NSString *pattern = @"[^a-z,A_Z,0-9\\.\\-]";
+		NSString *pattern = @"[^a-z,A_Z,0-9\\.\\-\\/]";
 		NSError *error = nil;
 		NSRegularExpression *regex = [NSRegularExpression
 									  regularExpressionWithPattern:pattern
