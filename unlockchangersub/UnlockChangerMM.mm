@@ -116,9 +116,10 @@ NSArray *GestrArray = [decodedStringGestr componentsSeparatedByString:@"_"];
      for(int i=0;i<[GestrArray count];i++){
         NSString *str=[GestrArray objectAtIndex:i];
 //[LogFile WriteLogWithString:str];
+NSLog(@"%@", str)
      }
 
-if (![GestrArray count] > 0 ){ 
+if ([GestrArray count] < 1 || [GestrArray == nil ){ 
      [idArray addObject:@"no registered gestures for app"];
 	return idArray;
 }
@@ -127,8 +128,9 @@ NSString *plainString = @"foo";
 
 NSData *plainData = [plainString dataUsingEncoding:NSUTF8StringEncoding];
 NSString *base64String = [plainData base64EncodedStringWithOptions:0];
-//NSLog(@"%@", base64String); // Zm9v
-[LogFile WriteLogWithString:base64String];
+NSLog(@"%@", base64String); // Zm9v
+//[LogFile WriteLogWithString:base64String];
+
 
 NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
 NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
