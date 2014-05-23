@@ -68,8 +68,8 @@
                               regularExpressionWithPattern:pattern
                               options:NSRegularExpressionCaseInsensitive error:&error];
 	if(error != nil){
-    	NSString *err = (@"ERror: %@",error);
-    	[LogFile WriteLogWithString:err];
+    	//NSString *err = (@"ERror: %@",error);
+    	[LogFile WriteLogWithString:@"Error"];
 	} else{
     	NSString *replaced = [regex stringByReplacingMatchesInString:str
                                     options:0
