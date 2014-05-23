@@ -35,7 +35,15 @@
 			<string>FLPrefsController</string>
 			<key>label</key>
 			<string>FlipLaunch</string>
-			</dict>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>RootViewController</string>
+			<key>label</key>
+			<string>RootView</string>
+		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSLinkListCell</string>
