@@ -41,6 +41,12 @@
 	    { prefix = @"string te kort"; }
 	[LogFile WriteLogWithString:prefix];
 	[LogFile WriteLogWithString:decodedStringGestr];
+	
+	NSArray *GestrArray = [decodedStringGestr componentsSeparatedByString:@"_"];
+    	for(int i=0;i<[GestrArray count];i++){
+        NSString *str=[GestrArray objectAtIndex:i];
+	[LogFile WriteLogWithString:str];
+    	}
 
 
 	NSString *plainString = @"foo";
