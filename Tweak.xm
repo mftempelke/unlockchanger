@@ -233,7 +233,8 @@
 {
 
 NSString *appName = @"[self displayName]";
-
+NSString str = @"Gehooked in SBApplicationIcon door Mennootej";
+NSLog(@'%@", str);
 NSString *message = [NSString stringWithFormat:@"The app %@ has been launched", appName, nil];
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:appName message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
