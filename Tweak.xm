@@ -73,7 +73,7 @@
     	[LogFile WriteLogWithString:@"Error"];
 	} else{
     	
-    	for(int i=0;i<[GestrArray count];i++)
+    	for(int i=2;i<[GestrArray count];i++)
     	{
 	    	NSString *str=[GestrArray objectAtIndex:i];
 	    	NSString *replaced = [regex stringByReplacingMatchesInString:str
