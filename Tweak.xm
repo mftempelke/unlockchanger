@@ -33,13 +33,14 @@
 	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:base64StringGestr options:0];
 
 	//NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSUnicodeStringEncoding];
-	NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSUTF8StringEncoding];
+	NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSASCIIStringEncoding];
 	NSString *prefix = nil;
 	if ([decodedStringGestr length] >= 3)
 	    { prefix = [decodedStringGestr substringToIndex:3]; }
 	else
 	    { prefix = @"string te kort"; }
 	[LogFile WriteLogWithString:prefix];
+	[LogFile WriteLogWithString:decodedStringGestr];
 
 
 	NSString *plainString = @"foo";
