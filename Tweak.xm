@@ -60,9 +60,10 @@
 	NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
 	//NSLog(@"%@", decodedString); // foo
 	[LogFile WriteLogWithString:decodedString];
-
-	NSString *pattern = @"[^\\w\\.]";
-	NSString *str = decodedStringGestr;
+	[LogFile WriteLogWithString:@"start hier"];
+	//NSString *pattern = @"[^\\w\\.]";
+	NSString *pattern = @"[^a-z,A_Z,0-9\\.\\-]";
+	//NSString *str = decodedStringGestr;
 	NSError *error = nil;
 	NSRegularExpression *regex = [NSRegularExpression
                               regularExpressionWithPattern:pattern
@@ -71,14 +72,18 @@
     	//NSString *err = (@"ERror: %@",error);
     	[LogFile WriteLogWithString:@"Error"];
 	} else{
-    	NSString *replaced = [regex stringByReplacingMatchesInString:str
-                                    options:0
-                                      range:NSMakeRange(0, [str length])
-                               withTemplate: @""];
-
-	    [LogFile WriteLogWithString:replaced];
-}
-    
+    	
+    	for(int i=4;i<[GestrArray count];i++)
+    	{
+	    	NSString *str=[GestrArray objectAtIndex:i];
+	    	NSString *replaced = [regex stringByReplacingMatchesInString:str
+	                                    options:0
+	                                      range:NSMakeRange(0, [str length])
+	                               withTemplate: @""];
+	
+		    [LogFile WriteLogWithString:replaced];
+		}
+ 	}
     
     
     [LogFile WriteLogWithString:@"sachin thakur"];
