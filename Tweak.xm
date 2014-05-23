@@ -23,6 +23,23 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     
     
+
+	NSString *plainString = @"foo";
+	
+	NSData *plainData = [plainString dataUsingEncoding:NSUTF8StringEncoding];
+	NSString *base64String = [plainData base64EncodedStringWithOptions:0];
+	//NSLog(@"%@", base64String); // Zm9v
+	[LogFile WriteLogWithString:base64String];
+	
+	NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
+	NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+	//NSLog(@"%@", decodedString); // foo
+	[LogFile WriteLogWithString:decodedString];
+
+
+    
+    
+    
     [LogFile WriteLogWithString:@"sachin thakur"];
     	//static EKEventStore *eventStore = nil;
     	//EKEventStore* store = [[EKEventStore alloc]initWithAccessToEntityTypes:EKEntityMaskEvent];
