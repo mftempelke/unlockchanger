@@ -40,7 +40,7 @@
 			<key>cell</key>
 			<string>PSLinkListCell</string>
 			<key>detail</key>
-			<string>RootViewController</string>
+			<string>eventsTable</string>
 			<key>label</key>
 			<string>RootView</string>
 		</dict>
