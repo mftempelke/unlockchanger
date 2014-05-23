@@ -27,6 +27,13 @@
 	    NSString *sbtest = [prefsGestr objectForKey:@"voicemail-sound-identifier"];
 	    [LogFile WriteLogWithString:sbtest];
 	    NSData *gestures = [prefsGestr objectForKey:@"Gestures"];
+	    
+	NSString *base64StringGestr = [gestures base64EncodedStringWithOptions:0];
+	[LogFile WriteLogWithString:base64StringGestr];
+	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:base64StringGestr options:0];
+	NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSUTF8StringEncoding];
+	[LogFile WriteLogWithString:decodedStringGestr];
+
 
 	NSString *plainString = @"foo";
 	
@@ -40,11 +47,6 @@
 	//NSLog(@"%@", decodedString); // foo
 	[LogFile WriteLogWithString:decodedString];
 
-	NSString *base64StringGestr = [gestures base64EncodedStringWithOptions:0];
-	NSData *decodedDataGestr = [[NSData alloc] initWithBase64EncodedString:base64StringGestr options:0];
-	NSString *decodedStringGestr = [[NSString alloc] initWithData:decodedDataGestr encoding:NSUTF8StringEncoding];
-	//NSLog(@"%@", decodedString); // foo
-	[LogFile WriteLogWithString:decodedStringGestr];
 
     
     
