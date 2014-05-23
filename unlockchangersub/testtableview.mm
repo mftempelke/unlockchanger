@@ -8,6 +8,7 @@
     NSArray *content;
     NSArray *indices;
 }
+@end
 
 @implementation RootViewController
 //content will hold our array of dictionaries while indices will hold all initial letters for each word in the list. Let's fill those up. Open RootViewController.m implementation file and override the method viewDidLoad with the following:
