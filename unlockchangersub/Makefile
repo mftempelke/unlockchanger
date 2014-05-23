@@ -2,7 +2,7 @@ ARCHS = armv7 arm64
 include theos/makefiles/common.mk
 
 BUNDLE_NAME = UnlockChangerMFOK
-UnlockChangerMFOK_FILES = UnlockChangerMM.mm testtableview.mm
+UnlockChangerMFOK_FILES = UnlockChangerMM.mm testtableview.mm eventsTable.m
 UnlockChangerMFOK_INSTALL_PATH = /Library/PreferenceBundles
 UnlockChangerMFOK_FRAMEWORKS = UIKit EventKit
 UnlockChangerMFOK_PRIVATE_FRAMEWORKS = Preferences
