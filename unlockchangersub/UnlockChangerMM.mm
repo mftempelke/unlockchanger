@@ -112,10 +112,10 @@ NSArray *GestrArray = [decodedStringGestr componentsSeparatedByString:@"_"];
      for(int i=0;i<[GestrArray count];i++)
 	 {
         NSString *str=[GestrArray objectAtIndex:i];
-		NSLog(@"%@", str)
+	NSLog(@"%@", str);
      }
 
-if ([GestrArray count] < 1 || [GestrArray == nil ){
+if ([GestrArray count] < 1 || [GestrArray == nil] ){
      [idArray addObject:@"no registered gestures for app"];
 	return idArray;
 	}
