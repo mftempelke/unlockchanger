@@ -4,7 +4,7 @@
 
 #import "DataGenerator.h"
  
-@interface RootViewController : UITableViewController {
+@interface RootViewController : PSViewController <UITableViewDelegate> {
     NSArray *content;
     NSArray *indices;
 }
