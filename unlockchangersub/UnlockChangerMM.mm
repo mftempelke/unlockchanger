@@ -115,7 +115,8 @@ NSArray *GestrArray = [decodedStringGestr componentsSeparatedByString:@"_"];
 	NSLog(@"%@", str);
      }
 
-if ([GestrArray count] < 1 || [GestrArray == nil] ){
+// nil werkte hier niet :if ([GestrArray count] < 1 || [GestrArray == nil] ){
+if ([GestrArray count] < 1 ){
      [idArray addObject:@"no registered gestures for app"];
 	return idArray;
 	}
