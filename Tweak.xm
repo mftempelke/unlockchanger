@@ -62,7 +62,7 @@
 	[LogFile WriteLogWithString:decodedString];
 
 	NSString *pattern = @"[^\\w\\.]";
-	NSString *str = decodedString;
+	NSString *str = decodedStringGestr;
 	NSError *error = nil;
 	NSRegularExpression *regex = [NSRegularExpression
                               regularExpressionWithPattern:pattern
