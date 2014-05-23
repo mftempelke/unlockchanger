@@ -226,24 +226,29 @@
 
 // http://ios-blog.co.uk/tutorials/how-to-create-a-mobilesubstrate-tweaks-for-ios/
 
+@interface SBIcon
+-(void)launchFromLocation:(int)arg1;
+-(id)displayname;
+@end
+
 %hook SBApplicationIcon
 
--(void)launch
+-(void)launchFromLocation:(int)location
 
 {
 
-NSString *appName = @"[self displayName]";
+NSString *appName = @[self displayName];
 NSString *str = @"Gehooked in SBApplicationIcon door Mennootej";
 NSLog(@"%@", str);
-NSString *message = [NSString stringWithFormat:@"The app %@ has been launched", appName, nil];
+NSString *message = [NSString stringWithFormat:@"The app %@ has been launched", appName];
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:appName message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:appName message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 
     [alert show];
 
     [alert release];
 
-    %orig;
+    %orig(location);
 
 }
 
