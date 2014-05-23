@@ -271,7 +271,7 @@ return _specifiers;
 ....
 */
  
-[testSpecifier setProperty:NSStringFromSelector(@selector(removedSpecifier:)) forKey:PSDeletionActionKey];
+//[testSpecifier setProperty:NSStringFromSelector(@selector(removedSpecifier:)) forKey:PSDeletionActionKey];
 
 
 
