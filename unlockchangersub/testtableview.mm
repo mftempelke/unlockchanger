@@ -2,6 +2,10 @@
 
 //Next we’re going to populate the currently empty table with data we get from our data generator. Open RootViewController.h and add these two instance variables to the class: 
 
+#import <Preferences/Preferences.h>
+#import <objc/runtime.h>
+#import <EventKit/EventKit.h>
+#import <EventKitUI/EventKitUI.h>
 #import "DataGenerator.h"
  
 @interface RootViewController : PSViewController <UITableViewDelegate> {
