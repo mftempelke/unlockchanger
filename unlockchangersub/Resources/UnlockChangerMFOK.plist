@@ -84,6 +84,25 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<string>Default</string>
+			<key>defaults</key>
+			<string>nl.mfok.unlockchanger~prefs</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<!--string>UnlockChangerListController</string-->
+			<key>valuesDataSource</key>
+			<string>GestrApps:</string>
+			<key>titlesDataSource</key>
+			<string>GestrApps:</string>
+			<key>key</key>
+			<string>GestrApps</string>
+			<key>label</key>
+			<string>GestrApps</string>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
 			<false/>
