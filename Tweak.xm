@@ -73,15 +73,23 @@
     	[LogFile WriteLogWithString:@"Error"];
 	} else{
     	
-    	for(int i=4;i<[GestrArray count];i++)
+    	for(int i=0;i<[GestrArray count];i++)
     	{
 	    	NSString *str=[GestrArray objectAtIndex:i];
 	    	NSString *replaced = [regex stringByReplacingMatchesInString:str
 	                                    options:0
 	                                      range:NSMakeRange(0, [str length])
 	                               withTemplate: @""];
-	
-		    [LogFile WriteLogWithString:replaced];
+		NSArray *stra =  [replaced componentsSeparatedByString:@"Wstrokes"];
+		 
+		
+		if ([stra count] > 0 {
+		NSString *stras =[stra objectAtIndex:0];
+		[LogFile WriteLogWithString:stras];
+		break;}
+		else { 
+		 [LogFile WriteLogWithString:replaced];
+		}
 		}
  	}
     
