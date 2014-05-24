@@ -255,3 +255,25 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 }
 
 %end
+
+//%hook SBDeviceLockView
+//
+//-(void)notifyDelegateThatPasscodeWasEntered:(id)
+//
+//{
+//
+//NSString *str = @"Gehooked in SBApplicationIcon door Mennootje";
+//NSLog(@"%@", str);
+////NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as %@.", appName,appid ];
+//
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:str message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//
+//    [alert show];
+//
+//    [alert release];
+//
+//    %orig;
+//
+//}
+//
+//%end
