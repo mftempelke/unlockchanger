@@ -280,7 +280,6 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 	 [alert release];
 	%orig;
 }
-}
 
 %end
 
