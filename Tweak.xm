@@ -289,10 +289,28 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 
 @end
 
-%hook SBDeviceLockView
+%hook SBActivationFailedAlertItem
 
 - (void)performUnlockAction{
 	NSString *str = @"performUnlockAction";
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:str message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    	[alert show];
+	 [alert release];
+%orig;
+}
+
+%end
+
+@interface SBPasscodeEntryAlertView
+
+- (void)dismiss;
+
+@end
+
+%hook SBPasscodeEntryAlertView
+
+- (void)dismiss{
+	NSString *str = @"dismiss";
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:str message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     	[alert show];
 	 [alert release];
