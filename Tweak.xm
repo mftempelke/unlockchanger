@@ -260,6 +260,7 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 
 - (void)deviceUnlockCanceled;
 - (void)deviceUnlockFailed;
+- (void)_showUnlockFailedIndicator;
 
 @end
 
@@ -279,6 +280,14 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
     	[alert show];
 	 [alert release];
 	%orig;
+}
+
+- (void)_showUnlockFailedIndicator{
+	NSString *str = @"_showUnlockFailedIndicator";
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:str message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    	[alert show];
+	 [alert release];
+%orig;
 }
 
 %end
