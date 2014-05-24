@@ -256,6 +256,34 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 
 %end
 
+@interface SBSlidingAlertDisplay
+
+- (void)deviceUnlockCanceled;
+- (void)deviceUnlockFailed;
+
+@end
+
+%hook SBSlidingAlertDisplay
+
+- (void)deviceUnlockCanceled {
+	//LASendEventWithName(UEDeviceUnlockCanceled);
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"cancel" message:@"cancel" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    	[alert show];
+	 [alert release];
+	%orig;
+}
+
+- (void)deviceUnlockFailed {
+	//LASendEventWithName(UEDeviceUnlockFailed);
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"fail" message:@"fail" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    	[alert show];
+	 [alert release];
+	%orig;
+}
+}
+
+%end
+
 //%hook SBDeviceLockView
 //
 //-(void)notifyDelegateThatPasscodeWasEntered:(id)
