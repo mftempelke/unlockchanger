@@ -48,3 +48,10 @@ subscribe to calendar changes :
 unix tail:
 
 tail -f /private/var/log/syslog
+
+todo:
+May 23 17:31:06 Figuurzaagseltje SpringBoard[4214]: Attempt to schedule a notification from PID 4214 which is not an application
+May 23 17:31:06: --- last message repeated 3 times ---
+
+May 23 17:31:06 Figuurzaagseltje backupd[4233]: MS:Warning: nil class argument for selector setCustomSlideToUnlockText:
+May 23 17:31:06 Figuurzaagseltje backupd[4233]: MS:Warning: nil class argument for selector launch
