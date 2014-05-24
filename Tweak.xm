@@ -256,6 +256,23 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 
 %end
 
+@interface SBDeviceLockPasscodeEntryDisplay
+
+- (void)deviceUnlockCanceled;
+
+@end
+
+%hook SBDeviceLockPasscodeEntryDisplay
+
+- (void)deviceUnlockCanceled {
+	NSString *str = @"deviceUnlockCanceled";
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:str message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    	[alert show];
+	 [alert release];
+}
+
+%end
+
 @interface SBSlidingAlertDisplay
 
 - (void)deviceUnlockCanceled;
