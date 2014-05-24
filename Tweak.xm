@@ -283,6 +283,24 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 
 %end
 
+@interface SBActivationFailedAlertItem
+
+- (void)performUnlockAction;
+
+@end
+
+%hook SBDeviceLockView
+
+- (void)performUnlockAction{
+	NSString *str = @"performUnlockAction";
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:str message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    	[alert show];
+	 [alert release];
+%orig;
+}
+
+%end
+
 //%hook SBDeviceLockView
 //
 //-(void)notifyDelegateThatPasscodeWasEntered:(id)
