@@ -238,6 +238,16 @@
 
 {
 
+    NSString *settingsPath = @"/var/mobile/Library/Preferences/nl.mfok.unlockchanger~prefs.plist";
+    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
+    static NSString * const senabled = @"appenabled";
+    BOOL enabled = prefs[senabled] ? [prefs[senabled] boolValue] : YES;
+
+    if( enabled ) {
+
+        
+    
+
 NSString *appName = [self displayName];
 NSString *appid = @"[self displayIdentifier]";
 NSString *str = @"Gehooked in SBApplicationIcon door Mennootje";
@@ -249,7 +259,7 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
     [alert show];
 
     [alert release];
-
+}
     %orig(location);
 
 }
