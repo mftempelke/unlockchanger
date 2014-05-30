@@ -355,6 +355,24 @@ NSString *message = [NSString stringWithFormat:@"The app %@ has been launched as
 
 %end
 
+//@interface SBLockScreenViewController
+//
+//- (void)shakeSlideToUnlockTextWithCustomText;
+//
+//@end
+
+%hook SBLockScreenViewController
+
+- (void)shakeSlideToUnlockTextWithCustomText:(id)unlockText{
+NSString *str = @"shakeSlideToUnlockTextWithCustomText";
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:str message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+     [alert show];
+[alert release];
+%orig(unlockText);
+}
+
+%end
+
 //%hook SBDeviceLockView
 //
 //-(void)notifyDelegateThatPasscodeWasEntered:(id)
