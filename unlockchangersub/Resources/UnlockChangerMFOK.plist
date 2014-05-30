@@ -115,6 +115,18 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>nl.mfok.unlockchanger~prefs</string>
+			<key>key</key>
+			<string>appenabled</string>
+			<key>label</key>
+			<string>App start popup message</string>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<string>PSEditTextCell</string>
 			<key>detail</key>
 			<string>PSDetailController</string>
